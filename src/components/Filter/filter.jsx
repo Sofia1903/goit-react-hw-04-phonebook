@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import { Title, FindInput, ContainerInput } from './filter.styled';
+import { Div, FilterLabel, Input } from './filter.styled';
 
-const Filter = ({ value, onChange }) => 
-    <ContainerInput>
-        <Title>Find by name</Title>
-        <FindInput type="text" value={value} onChange={onChange} />
-    </ContainerInput>
+const Filter = ({ filter, onChange }) => 
+    <Div>
+        <FilterLabel>Enter name:</FilterLabel>
+        <Input type="text" value={filter} onChange={onChange} />
+    </Div>
 
 export default Filter;
 
-Filter.propTypes = {
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+Filter.propTyres = {
+    filter: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
 }
